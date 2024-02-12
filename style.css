@@ -1,16 +1,16 @@
 *{
   margin: 0;
   padding: 0;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:Georgia, 'Times New Roman', Times, serif, 'Segoe UI','Playfair Display';
   box-sizing: border-box;
 }
 
 .container{
   height: 100vh;
   width: 100%;
-  background: linear-gradient(45deg,#142613,#536556,#b4adaf,#1b321a,#142613);
+  background: linear-gradient(300deg,#295f48,#35696C,#eeeeee,#295f48);
   background-size: 400% 400%;
-  animation : color 12s ease-in-out infinite;
+  animation : color 18s ease-in-out infinite;
 
 }
 @keyframes color{
@@ -26,4 +26,70 @@
   100% {
     background-position: 0 0;
 }
+}
+#header{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+
+}
+.container{
+  padding: 10px 10%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo{
+  width: 200px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin:20px 20px;
+
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Segoe UI", Arial, sans-serif; 
+}
+nav ul li a:hover {
+  color: #fff; /* Set text color to white on hover */
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header-text {
+  text-align: center;
+  max-width: 600px; /* Adjust max-width as needed */
+  padding: 20 20px;
+}
+.header-text h1 {
+  margin-bottom: 20px; /* Add space between heading and other text */
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Playfair Display"; 
+}
+
+.header-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Playfair Display"; 
 }
