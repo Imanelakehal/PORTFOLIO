@@ -93,3 +93,46 @@ nav ul li a:hover {
   font-weight: bold;
   font-family: "Playfair Display"; 
 }
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  background:#E5EBEC ;
+  position: relative;
+  display: inline-block;
+  padding: 12px 36px;
+  margin : 10px 0;
+  color:black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(90deg , #A0C3C5, #35696C);
+  
+}
+span{
+  position: absolute;
+  background: black;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+@keyframes animate{
+  0%
+  {
+  width: 0px;
+  height: 0px;
+  opacity: 0.5;
+  }
+  100%
+  {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

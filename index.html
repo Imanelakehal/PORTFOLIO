@@ -10,7 +10,7 @@
 <div id="header>">
   <div class="container">
       <nav>
-        <a href="#default" class="logo">IMANE LAKEHAL</a>
+        <a href="#default" class="logo">PORTFOLIO</a>
         <ul>
           <li ><a href='#'>Home</a></li>
           <li ><a href='#'>Projects</a></li>
@@ -23,6 +23,25 @@
             <h1>Hey, I am Imane Lakehal</h1>
             <h3>A dedicated third-year Software Engineering student at Sichuan University. With a strong foundation in programming languages, algorithms, and software development methodologies.
               I am enthusiastic about leveraging technology to solve complex problems and drive innovation. Throughout my academic journey,</h3>
+            <button class="button">Projects</button>  
+            <script type="text/javascript">
+              const buttons = document.querySelectorAll('button');
+              buttons.forEach(btn =>{
+                btn.addEventListener('click',function(e){
+                  let x = e.clientX - e.target.offsetLeft;
+                  let y = e.clientY - e.target.offsetTop;
+
+                  let ripples = document.createElement('span');
+                  ripples.style.left= x + 'px';
+                  ripples.style.top = y + 'px';
+                  this.appendChild(ripples);
+
+                  setTimeout(()=> {
+                    ripples.remove()
+                  },1000)
+                })
+              })
+            </script>
         </div>
     </div>
 
