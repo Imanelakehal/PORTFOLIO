@@ -8,25 +8,71 @@
 .container{
   height: 100vh;
   width: 100%;
-  background: linear-gradient(300deg,#295f48,#35696C,#eeeeee,#295f48);
+  background-color: #527853;
   background-size: 400% 400%;
   animation : color 18s ease-in-out infinite;
 
 }
-@keyframes color{
-  0%{
-    background-position: 0 50%;
-  }
-  50%{
-    background-position: 100% 50%;
-  }
-  10%{
-    background-position: 0 50%;
-  }
-  100% {
-    background-position: 0 0;
+
+.Button {
+  align-items: center;
+  background-color: #BD855A;
+  border: 2px solid #111;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Fairplay Display',sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  height: auto;
+  justify-content: center;
+  line-height: 1;
+  max-width: 100%;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+.Button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
 }
+
+.Button:hover:after {
+  transform: translate(0, 0);
+}
+
+.Button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.Button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .Button {
+    padding: 10px 20px;
+  }
+}
+
 #header{
   width: 100%;
   height: 100vh;
@@ -36,7 +82,7 @@
 .container{
   padding: 10px 10%;
 }
-
+   
 nav{
   display: flex;
   align-items: center;
@@ -44,12 +90,18 @@ nav{
   flex-wrap: wrap;
 }
 .logo{
-  width: 200px;
-  color: black;
+  width: 100px;
+  color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
 
+}
+.logo::before {
+  content: "\2605"; /* Unicode for a star symbol */
+  margin-left: 10px; /* Adjust the spacing between the text and the star */
+  font-size: 19px; /* Adjust the size of the star */
+  color: bisque;
 }
 nav ul li{
   display: inline-block;
@@ -59,11 +111,11 @@ nav ul li{
 }
 
 nav ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 18px;
-  font-weight: bold;
-  font-family: "Segoe UI", Arial, sans-serif; 
+  font-weight: 550;
+  font-family: 'Playfair Display' , Arial, sans-serif; 
 }
 nav ul li a:hover {
   color: #fff; /* Set text color to white on hover */
@@ -71,36 +123,39 @@ nav ul li a:hover {
 
 .header-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-top: 0px;
   align-items: center;
-  height: 100%;
+  height: 70vh; /* You can adjust the height as needed */
+  padding: 70px 0px 70px 30px; /* Add padding to provide some space from the edges */
 }
-
 .header-text {
-  text-align: center;
-  max-width: 600px; /* Adjust max-width as needed */
-  padding: 20 20px;
+  max-width: 600px; /* Adjust the maximum width of the text container */
 }
 .header-text h1 {
-  margin-bottom: 20px; /* Add space between heading and other text */
+  color: white;
+  margin-bottom: 40px; /* Add space between heading and other text */
   font-size: 50px;
   font-weight: bold;
   font-family: "Playfair Display"; 
 }
 
 .header-text h3 {
+  color: white;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   font-family: "Playfair Display"; 
 }
 
 .button{
   display: flex;
+  left: 900px; /* Adjust the left position as needed */
+  bottom: 150px; /* Adjust the bottom position as needed */
   justify-content: center;
   align-items: center;
   min-height: 40px;
   background:#E5EBEC ;
-  position: relative;
+  position: fixed;
   display: inline-block;
   padding: 12px 36px;
   margin : 10px 0;
@@ -111,7 +166,7 @@ nav ul li a:hover {
   font-weight: bold;
   border-radius: 20px;
   overflow: hidden;
-  background: linear-gradient(90deg , #A0C3C5, #35696C);
+  background: linear-gradient(90deg , #deecec, #F9E8D9);
   
 }
 span{
@@ -135,4 +190,48 @@ span{
     height: 500px;
     opacity: 0;
   }
+}
+.frame {
+  position: absolute;
+  top: 85vh; /* Position it below the first page */
+  left: 0;
+  width: 100%;
+  height: calc(25vh - 70px); /* Adjust height as needed */
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.frame h1 {
+  font-size: 80px;
+}
+
+.image-container {
+  position: absolute;
+  top: 150px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the right position as needed */
+}
+
+.image-container img {
+  max-width: 600px; /* Adjust the width of the image as needed */
+  height: auto;
+}
+
+.image-container h3 {
+  color: white; /* Set text color to white */
+  font-size: 16px; /* Adjust font size as needed */
+  margin-top: 10px; /* Add top margin for spacing */
+  margin-left: 220px; /* Adjust left margin to move the h3 to the right */
+  position: relative; /* Position the <h3> element relatively */
+}
+
+.image-container h3::after {
+  content: ""; /* Create the pseudo-element */
+  position: absolute; /* Position it absolutely */
+  bottom: -5px; /* Adjust the position below the <h3> */
+  left: 50px; /* Align it with the left side */
+  width: 50px; /* Adjust the width of the line */
+  height: 2px; /* Adjust the height of the line */
+  background-color: #F9E8D9; /* Set the color of the line */
+  display: block; /* Ensure it's displayed as a block element */
+  margin: 0 auto; /* Center the line horizontally */
 }
