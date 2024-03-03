@@ -207,19 +207,19 @@ span{
 
 .image-container {
   position: absolute;
-  top: 150px; /* Adjust the top position as needed */
-  left: 20px; /* Adjust the right position as needed */
+  top: 10px; /* Adjust the top position as needed */
+  left: 40px; /* Adjust the right position as needed */
 }
 
 .image-container img {
-  max-width: 600px; /* Adjust the width of the image as needed */
+  max-width: 550px; /* Adjust the width of the image as needed */
   height: auto;
 }
 
 .image-container h3 {
   color: white; /* Set text color to white */
   font-size: 16px; /* Adjust font size as needed */
-  margin-top: 10px; /* Add top margin for spacing */
+  margin-top: -180px; /* Add top margin for spacing */
   margin-left: 220px; /* Adjust left margin to move the h3 to the right */
   position: relative; /* Position the <h3> element relatively */
 }
@@ -229,9 +229,10 @@ span{
   position: absolute; /* Position it absolutely */
   bottom: -5px; /* Adjust the position below the <h3> */
   left: 50px; /* Align it with the left side */
-  width: 50px; /* Adjust the width of the line */
-  height: 2px; /* Adjust the height of the line */
+  width: 60px; /* Adjust the width of the line */
+  height: 4px; /* Adjust the height of the line */
   background-color: #F9E8D9; /* Set the color of the line */
   display: block; /* Ensure it's displayed as a block element */
-  margin: 0 auto; /* Center the line horizontally */
+  margin: 10 auto; /* Center the line horizontally */
+  border-radius: 2px; 
 }
