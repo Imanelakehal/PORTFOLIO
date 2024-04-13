@@ -8,9 +8,9 @@
 </head>
 <body>
   <div class="frame">
-    <h1>PORTFOLIO</h1>
+    <h1 REFL-TEXT="PORTFOLIO">PORTFOLIO</h1>
   </div>
-<div id="header>">
+<div id="header">
   <div class="container">
       <nav>
         <a href="#default" class="logo">PORTFOLIO</a>
@@ -55,6 +55,47 @@
     </div>
   </div> 
 </div>
+<!-- About Section -->
+<div id="about-section">
+  <div class="container">
+    <img src="Woman.svg" alt="Woman Illustration">
+  </div>
+  <div class="boxes">
+    <div class="box" id="box1">
+      <div class="message1">Hey there! I am Imane, a passionate software engineer in my third year majoring in Software Engineering.</div>
+    </div>
+    <div class="box" id="box2">
+      <div class="message2">Coding became my playground years ago, and I love building things that come alive on the web. My toolbox? HTML, CSS, JavaScript (React included!). I am also into UX/UI.</div>
+    </div>
+    <div class="box" id="box3">
+      <div class="message3">I'm not just all code though. I love seeing my creations come to life, and that's why projects like my PORTFOLIO Website and my healthcare application.</div>
+    </div>
+    <div class="box" id="box4">
+      <div class="message4">So, what drives me? The thrill of solving problems with elegant code, the magic of transforming ideas into pixels, and the sheer joy of connecting with people through the digital world. ✨</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+const options = {
+  threshold: 0.1 // Change as needed
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show'); 
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+const boxElements = document.querySelectorAll('.box');
+boxElements.forEach((el) => observer.observe(el));
+
+</script>
+
 </body>
 </html>
 

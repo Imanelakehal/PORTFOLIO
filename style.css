@@ -11,8 +11,12 @@
   background-color: #3A5A40;
   background-size: 400% 400%;
   animation : color 18s ease-in-out infinite;
-
 }
+
+body {
+    overflow-x: hidden;
+}
+
 
 .Button {
   align-items: center;
@@ -203,6 +207,20 @@ span{
 .frame h1 {
   font-size: 90px;
 }
+.frame h1:before{
+  content: attr(REFL-TEXT);
+  position: absolute;
+  top: 10px;
+  left: 470px;
+  transform: rotateX(180deg);
+  line-height: 70px;
+  transform-origin: bottom;
+  background: linear-gradient(to top,#fff,transparent);
+  -webkit-background-clip: text ;
+  color:transparent;
+  opacity: 0.4;
+
+}
 
 .image-container {
   position: absolute;
@@ -234,4 +252,120 @@ span{
   display: block; /* Ensure it's displayed as a block element */
   margin: 10 auto; /* Center the line horizontally */
   border-radius: 2px; 
+}
+
+/* Styling for the "About" section */
+#about-section {
+  background-color: #F9E8D9; /* Set the background color for the "About" section */
+  color: white; /* Set the text color */
+  padding: 50px 0; /* Add some padding */
+  display: flex; /* Use flexbox to center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* Additional styling for the content inside the "About" section */
+#about-section .container {
+  height: 800px; /* Adjust height as needed */
+  width: 800px; /* Adjust width as needed */
+  background-color: #F9E8D9; /* Set the background color for the content */
+  display: flex; /* Use flexbox to center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+
+#about-section .container img {
+  max-width: 15% !important; /* Adjust the width of the image */
+  position: absolute; /* Position the image absolutely */
+  top: 850px; /* Adjust the distance above the container */
+  left: 1250px; /* Adjust the distance from the left */
+}
+.box {
+  position: absolute;
+  left: 328px;
+  top: 800px;
+  background-color: #BD855A;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 906px;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0.3);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.box.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+#box2 {
+  position: absolute;
+  left: 128px;
+  top: 960px;
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 906px;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0.3);
+}
+
+#box3 {
+  position: absolute;
+  left: 328px;
+  top: 1120px;
+  background-color: #BD855A;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 906px;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0.3);
+}
+
+#box4 {
+  position: absolute;
+  left: 128px;
+  top: 1280px;
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 906px;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0.3);
+}
+#box {
+  transition-delay: 100ms;
+}
+
+#box2 {
+  transition-delay: 200ms;
+}
+
+#box3{
+  transition-delay: 300ms;
+}
+
+#box4 {
+  transition-delay: 400ms;
+}
+
+.message1,
+.message2,
+.message3,
+.message4 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
