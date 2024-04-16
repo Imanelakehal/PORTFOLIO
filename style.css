@@ -8,7 +8,7 @@
 .container{
   height: 100vh;
   width: 100%;
-  background-color: #3A5A40;
+  background-color: #F9E8D9;
   background-size: 400% 400%;
   animation : color 18s ease-in-out infinite;
 }
@@ -95,7 +95,7 @@ nav{
 }
 .logo{
   width: 100px;
-  color: white;
+  color: #000000;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -115,7 +115,7 @@ nav ul li{
 }
 
 nav ul li a {
-  color: white;
+  color: #000000;
   text-decoration: none;
   font-size: 18px;
   font-weight: 550;
@@ -137,7 +137,7 @@ nav ul li a:hover {
   max-width: 600px; /* Adjust the maximum width of the text container */
 }
 .header-text h1 {
-  color: white;
+  color: #000000;
   margin-bottom: 40px; /* Add space between heading and other text */
   font-size: 50px;
   font-weight: bold;
@@ -145,7 +145,7 @@ nav ul li a:hover {
 }
 
 .header-text h3 {
-  color: white;
+  color: #000000;
   font-size: 20px;
   font-weight: 500;
   font-family: "Playfair Display"; 
@@ -499,4 +499,87 @@ input{
 }
 #projects-section .card[for='c4']{
   background-image: url(Project4.jpg);
+}
+
+
+.skills-page {
+  background-color: #F9E8D9;
+  height: 100vh;
+  width: 100vw;
+  position: relative; /* Ensure absolute positioning is relative to this container */
+}
+
+.skills-page h2 {
+  font-size: 20px; /* Make sure 'px' is lowercase */
+  color: #333; /* or any color you prefer */
+  position: absolute;
+  top: 60px; /* Adjust as needed to move the text down */
+  left: 150px; /* Adjust as needed to move the text to the right */
+}
+
+.skills-page h1 {
+  font-size: 40px;
+  color: #000000;
+  font-weight: bolder;
+  position: absolute;
+  top: 120px ;
+  left: 150px ;
+
+}
+.skills-page img {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 190px; /* Adjust the top position as needed */
+  left: 160px; /* Adjust the left position as needed */
+  animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+}
+
+@keyframes fadeInFromTop{
+  from{
+    opacity : 0;
+    transform:  translateY(-20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0) rotate(360deg);
+  }
+  25% {
+    transform: translateY(15%) rotate(360deg);
+  }
+  50% {
+    transform: translateY(5%) rotate(360deg);
+  }
+  75% {
+    transform: translateY(15%) rotate(360deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+
+.skills-page img:nth-child(3) {
+  left: calc(160px + (100px + 60px) * 2); /* Adjust to position it next to the second image with a margin of 40px */
+}
+
+.skills-page img:nth-child(4) {
+  left: calc(160px + (100px + 60px) * 3); /* Adjust to position it next to the third image with a margin of 40px */
+}
+
+.skills-page img:nth-child(5) {
+  left: calc(160px + (100px + 60px) * 4); /* Adjust to position it next to the fourth image with a margin of 40px */
+}
+
+.skills-page img:nth-child(6) {
+  left: calc(160px + (100px + 60px) * 5); /* Adjust to position it next to the fifth image with a margin of 40px */
+}
+
+.skills-page img:nth-child(7) {
+  left: calc(160px + (100px + 60px) * 6); /* Adjust to position it next to the fifth image with a margin of 40px */
 }
