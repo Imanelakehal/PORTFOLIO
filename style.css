@@ -595,10 +595,10 @@ input{
 .Contact-page p {
   text-align: center;
   color: #3A5A40;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bolder;
   position: absolute;
-  top: 60px; /* Adjust to place it at the top */
+  top: 30px; /* Adjust to place it at the top */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -606,10 +606,10 @@ input{
 .Contact-page h2 {
   text-align: center;
   color: #3A5A40;
-  font-size: 30px; /* Adjust font size as needed */
+  font-size: 25px; /* Adjust font size as needed */
   font-weight: normal; /* Change font weight to normal */
   position: absolute;
-  top: 140px; /* Adjust based on the height of the previous text */
+  top: 80px; /* Adjust based on the height of the previous text */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -624,50 +624,49 @@ input{
 
 .Contact-page .container form {
   width: 670px;
-  height: 600px;
+  height: 670px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.5); /* Adjust background color and opacity */
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); /* Adjust box shadow for blur effect */
+  padding: 10px; /* Added padding for better spacing */
 }
-/* Input field styles */
-.Contact-page .container form input[type="text"],
-.Contact-page .container form input[type="email"],
+
+.Contact-page .container form label {
+  display: block;
+  margin-bottom: 1px;
+  color: #000000;
+}
+
+.Contact-page .container form input,
 .Contact-page .container form textarea {
-  width: 300px;
-  height: 50px;
-  padding: 0 10px;
-  margin: 10px 0;
-  outline: none;
+  width: calc(100% - 20px); /* Adjusted width to accommodate padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+  font-size: 14px;
+  color: #000000;
+}
+
+.Contact-page .container form textarea {
+  min-height: 40px;
+  max-height: 90px;
+}
+
+.Contact-page .container form #button {
   border: none;
-  font-size: 20px;
-  background: none;
-  border-bottom: 2px solid #deecec;
-  color: #3A5A40;
-}
-
-.Contact-page .container form textarea {
-  height: 150px;
-}
-
-.Contact-page .container form input::placeholder,
-.Contact-page .container form textarea::placeholder {
-  color: #3A5A40;
-}
-
-/* Adjustments for specific fields */
-.Contact-page .container form .name-fields {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.Contact-page .container form .name-fields .input-field {
-  width: calc(50% - 10px);
-}
-
-.Contact-page .container form #email {
+  background: #fff;
+  border-radius: 5px;
   margin-top: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
+  width: 200px;
+  height: 60px;
+  padding: 0;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
